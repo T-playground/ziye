@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        PAT: ${{ secrets.PAT }}
+        PATH: ${{ secrets.PATH }}
     steps:
       - uses: actions/checkout@v1
         
@@ -24,9 +24,9 @@ jobs:
           git clone https://github.com/Sunert/Scripts.git ~/Scripts
       - name: Pull
         run: |
-          git clone "https://" + ${{ secrets.PAT }} + "@github.com/T-playground/test_sync.git" ~/test
-          sudo cp ~/Scripts/Task/youth.js ~/test/youth.js
-          cd ~/test
+          git clone ${{ secrets.PATH }} ~/test_sync
+          sudo cp ~/Scripts/Task/youth.js ~/test_sync/youth.js
+          cd ~/test_sync
           git add ./youth.js
           git commit
           git push
