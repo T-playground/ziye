@@ -14,8 +14,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
-    env:
-        PATH: ${{ secrets.PATH }}
+    
     steps:
       - uses: actions/checkout@v1
         
@@ -23,6 +22,8 @@ jobs:
         run: |
           git clone https://github.com/Sunert/Scripts.git ~/Scripts
       - name: Pull
+        env:
+            PATH: ${{ secrets.PATH }}
         run: |
           git clone ${{ secrets.PATH }} ~/test_sync
           sudo cp ~/Scripts/Task/youth.js ~/test_sync/youth.js
