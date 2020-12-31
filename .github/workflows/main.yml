@@ -25,7 +25,10 @@ jobs:
         run: |
           git clone ${{ secrets.PPSSAA }} ~/test_sync
           sudo cp ~/Scripts/Task/youth.js ~/test_sync/youth.js
+      - name: Pull2
+        run: |
           cd ~/test_sync
+          git pull ${{ secrets.PPSSAA }}
           git add ./youth.js
           git commit
           git push
