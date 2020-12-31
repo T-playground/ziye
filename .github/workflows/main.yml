@@ -30,7 +30,7 @@ jobs:
           cd ~/test_sync
           git config --global user.email "${{ secrets.EMAIL }}"
           git config --global user.name "${{ secrets.NAME }}"
-          git add ./youth.js
+          git add ./youth/youth.js
           git commit -m "Auto update"
           git push
         
