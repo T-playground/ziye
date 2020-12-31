@@ -24,7 +24,7 @@ jobs:
           git clone https://github.com/Sunert/Scripts.git ~/Scripts
       - name: Pull
         run: |
-          git pull "https://" + ${{ secrets.PAT }} + "@github.com/T-playground/test_sync.git" ~/test
+          git clone "https://" + ${{ secrets.PAT }} + "@github.com/T-playground/test_sync.git" ~/test
           sudo cp ~/Scripts/Task/youth.js ~/test/youth.js
           cd ~/test
           git add ./youth.js
