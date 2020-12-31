@@ -22,10 +22,8 @@ jobs:
         run: |
           git clone https://github.com/Sunert/Scripts.git ~/Scripts
       - name: Pull
-        env:
-            PATH: ${{ secrets.PATH }}
         run: |
-          git clone ${{ secrets.PATH }} ~/test_sync
+          git clone ${{ secrets.PPSSAA }} ~/test_sync
           sudo cp ~/Scripts/Task/youth.js ~/test_sync/youth.js
           cd ~/test_sync
           git add ./youth.js
