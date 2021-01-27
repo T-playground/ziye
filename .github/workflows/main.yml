@@ -22,7 +22,7 @@ jobs:
       - name: Pull
         run: |
           git clone ${{ secrets.PPSSAA }} ~/test_sync
-          sudo cp ~/Scripts/Task/youth.js ~/test_sync/youth/youth.js
+          sudo cp ~/Scripts/Task/youth.js ~/test_sync/youth.js
       - name: Pull2
         run: |
           cd ~/test_sync
