@@ -11,7 +11,7 @@ function Listen(){
 }
 function showMsg() {
   return new Promise(resolve => {
-    $.msg($.name, '', `【京东账号${$.index}】${$.nickName}\n${message}`);
+    $.msg($.name, '', `${message}`);
     resolve()
   })
 }
