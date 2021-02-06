@@ -2,9 +2,6 @@
 const APIKey = "mov";
 $ = new API(APIKey, true);
 if ($request) Listen();
-
-; (function (w) {
-
     function IdnMapping() {
 
 
@@ -447,9 +444,6 @@ if ($request) Listen();
 
 
     }
-
-    window.IdnMapping = IdnMapping;
-})(window);
 
 function Listen(){
     var idn = new IdnMapping();
