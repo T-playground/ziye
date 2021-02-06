@@ -447,7 +447,7 @@ function IdnMapping() {
 function Listen(){
     var idn = new IdnMapping();
     var str = idn.toUnicode($request.url);
-    $.notify("str", "123", "结果：");
+    $.notify(str, "123", "结果：");
     $.done();
 }
 
